@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -124,7 +128,15 @@
         <h2 class="map__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-      <img class="map__image" src="#" width="50" height="50" alt="Карта как к нам проехать.">
+      <picture>
+        <source type="image/png" media="(min-width: 1440px)"
+          srcset="images/map/location-desktop@1x.png 1x, images/map/location-desktop@2x.png 2x" width="1440"
+          height="400">
+        <source type="image/png" media="(min-width: 768px)"
+          srcset="images/map/location-tablet@1x.png 1x, images/map/location-tablet@2x.png 2x" width="768" height="400">
+        <img class="map__image" src="images/map/location-mobile@1x.png" srcset="images/map/location-mobile@2x.png 2x"
+          width="320" height="362" alt="Карта как к нам проехать.">
+      </picture>
     </section>
 
   </main>
