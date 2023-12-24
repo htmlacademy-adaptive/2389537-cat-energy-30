@@ -1,0 +1,36 @@
+.purpose__title {
+  color: #000000;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.purpose__list {
+  @include list();
+}
+
+.purpose__item {
+  background-color: $basic-text-background;
+}
+
+.purpose__text {
+  font-family: $secondary-font;
+  line-height: 18px;
+  color: $paragraf-font-color;
+}
+
+.purpose__link {
+  @include link();
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.purpose__text {
+  color: #4444444;
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 18px;
+}
