@@ -1,0 +1,13 @@
+.site-list {
+  @include list();
+}
+
+.site-list__link {
+  font-family: "Lato", sans-serif;
+
+  @include link();
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}

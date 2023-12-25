@@ -1,0 +1,14 @@
+.more__title {
+  @include link();
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.more__text {
+  font-family: $secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $paragraf-font-color;
+}
