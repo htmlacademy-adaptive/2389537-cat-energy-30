@@ -1,3 +1,4 @@
+/* stylelint-disable no-duplicate-selectors */
 .button {
   @include link();
   font-size: 16px;
@@ -8,9 +9,29 @@
   color: #ffffff;
   border: none;
   text-decoration: none;
+  font-family: $primary-font;
+  display: block;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   &--secondary {
     background-color: $basic-text-background;
+    color: $paragraf-font-color;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
     color: $paragraf-font-color;
   }
 }

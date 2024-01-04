@@ -1,3 +1,10 @@
 .slider {
   font-size: 16px;
 }
+
+.slider__toggle {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: url("../../images/icons/stack.svg#thumb");
+}

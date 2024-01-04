@@ -1,11 +1,34 @@
+/* stylelint-disable declaration-block-no-duplicate-properties */
+/* stylelint-disable no-eol-whitespace */
 .gift {
   background-color: $primary-color;
+  background-image: url("../../images/cat-case-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 290px;
 }
 
 .gift__text {
+  margin: 0;
   font-family: $secondary-font;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  position: relative;
+  margin: 0;
+  padding-bottom: 43px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 135px;
+    left: 123px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../images/icons/stack.svg#icon-gift");
+    z-index: 4;
+  }
 }

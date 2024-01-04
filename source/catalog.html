@@ -16,8 +16,16 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html">
-      <img class="main-header__logo-image" src="#" width="50" height="50" alt="Логотип Cat energy.">
-      <img class="main-header__logo-image" src="#" width="50" height="50" alt="Наименование компании Cat energy.">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/svg/logo-desktop.svg" width="70"
+          height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/svg/logo-tablet.svg" width="60"
+          height="50">
+        <img class="main-header__logo-image" src="images/svg/logo-mobile.svg" width="33" height="38"
+          alt="Логотип Cat Energy.">
+      </picture>
+      <img class="main-header__logo-text" src="images/svg/logo-text.svg" width="101" height="18"
+        alt="Наименование компании Cat energy.">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -329,7 +337,8 @@
   <footer class="main-footer">
 
     <a class="main-footer__logo logo" href="#">
-      <img class="logo__text" src="#" width="50" height="50" alt="Логотип Cat Energy.">
+      <img class="main-footer__logo-text" src="images/svg/logo-text.svg" width="101" height="18"
+        alt="Наименование компании Cat energy.">
     </a>
 
     <ul class="main-footer__socials socials">
@@ -353,7 +362,7 @@
       </li>
     </ul>
 
-    <a class="coopyright" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="main-footer__coopyright coopyright" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="coopyright__text">HTML Academy
       </span>
       <span class="visually-hidden">Логотип HTML Academy.</span>

@@ -1,4 +1,17 @@
+.inner {
+  & .map__information {
+    background-color: $basic-text-background;
+  }
+}
+
 .inner__text {
+  display: block;
+  margin-bottom: 39px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.inner__title {
+  padding-top: 27px;
+  padding-bottom: 37px;
 }

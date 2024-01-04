@@ -16,8 +16,16 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="#">
-      <img class="main-header__logo-image" src="#" width="50" height="50" alt="Логотип Cat energy.">
-      <img class="main-header__logo-image" src="#" width="50" height="50" alt="Наименование компании Cat energy.">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/svg/logo-desktop.svg" width="70"
+          height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/svg/logo-tablet.svg" width="60"
+          height="50">
+        <img class="main-header__logo-image" src="images/svg/logo-mobile.svg" width="33" height="38"
+          alt="Логотип Cat Energy.">
+      </picture>
+      <img class="main-header__logo-text" src="images/svg/logo-text.svg" width="101" height="18"
+        alt="Наименование компании Cat energy.">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -49,73 +57,85 @@
 
     <p class="inner__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-    <form class="inner__items form" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="inner__items form" action="https://echo.htmlacademy.ru/" method="get">
 
-      <fieldset class="form__item form-group">
-        <legend class="visually-hidden">Анкета</legend>
-        <label class="form-group__item" for="name">
-          Имя:*
-          <input class="form-group__field" type="text" id="name" name="name" placeholder="Барсик" required>
-        </label>
-        <label class="form-group__item" for="weight">
-          Вес (кг):*
-          <input class="form-group__field" type="text" id="weight" name="weight" placeholder="7" required>
-        </label>
-        <label class="form-group__item" for="age">
-          Возраст (лет):
-          <input class="form-group__field" type="text" id="age" name="age" placeholder="7">
-        </label>
-      </fieldset>
+      <div class="form__items-wrapper">
 
-      <fieldset class="form__item form-group">
-        <legend class="form-group__title visually-hidden">Программа</legend>
-        <label class="form-group__item" for="diet">
-          Похудение
-          <input class="form-group__radio" type="radio" id="diet" name="reasons" value="Похудение" checked>
-        </label>
-        <label class="form-group__item" for="fat">
-          Набор массы
-          <input class="form-group__radio" type="radio" id="fat" name="reasons" value="Набор массы">
-        </label>
-        <label class="form-group__item" for="unknown">
-          Не знаю (нужен Ваш совет)
-          <input class="form-group__radio" type="radio" id="unknown" name="reasons" value="Не знаю (нужен Ваш совет)">
-        </label>
-      </fieldset>
+        <fieldset class="form__item form__item--anketa form-group">
+          <legend class="form-group__title visually-hidden">Анкета</legend>
+          <label class="form-group__item" for="name">
+            Имя:*
+            <input class="form-group__item-input" type="text" id="name" name="name" placeholder="Барсик" required>
+          </label>
+          <label class="form-group__item" for="weight">
+            Вес (кг):*
+            <input class="form-group__item-input" type="text" id="weight" name="weight" placeholder="7" required>
+          </label>
+          <label class="form-group__item" for="age">
+            Возраст (лет):
+            <input class="form-group__item-input" type="text" id="age" name="age" placeholder="7">
+          </label>
+        </fieldset>
 
-      <fieldset class="form__item form-group">
+        <fieldset class="form__item form__item--radio form-group">
+          <legend class="form-group__title visually-hidden">Программа</legend>
+          <label class="form-group__item form-group__item--radio" for="diet">
+            Похудение
+            <input type="radio" id="diet" name="reasons" checked>
+          </label>
+          <label class="form-group__item form-group__item--radio" for="fat">
+            Набор массы
+            <input type="radio" id="fat" name="reasons">
+          </label>
+          <label class="form-group__item form-group__item--radio" for="unknown">
+            Не знаю (нужен Ваш совет)
+            <input type="radio" id="unknown" name="reasons">
+          </label>
+        </fieldset>
+      </div>
+
+      <fieldset class="form__item form__item--contacts form-group">
         <legend class="form-group__title">Контактные данные (владельца кота)</legend>
-        <label class="form-group__item" for="email">
+        <label class="form-group__item  form-group__item--email" for="email">
           E-mail:*
-          <input type="text" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+          <span class="form-group__input-wrapper form-group__input-wrapper--email">
+            <input class="form-group__item-input" type="text" id="email" name="email" placeholder="kuklachev@gmail.com"
+              required>
+          </span>
         </label>
-        <label class="form-group__item" for="phone">
+        <label class="form-group__item form-group__item--phone" for="phone">
           Телефон:*
-          <input type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+          <span class="form-group__input-wrapper form-group__input-wrapper--phone">
+            <input class="form-group__item-input" type="text" id="phone" name="phone" placeholder="8 (960) 900-60-90"
+              required>
+          </span>
         </label>
-        <p class="form-group__title">Комментарий</p>
+      </fieldset>
+
+      <fieldset class="form__item form-group">
+        <legend class="form-group__title">Комментарий</legend>
         <label for="comment">Комментарий</label>
         <textarea class="form-group__item form-group__item--textarea" id="comment" name="comment"
           placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
 
-      <fieldset class="form-group">
+      <fieldset class="form__item form__item--checkbox form-group">
         <legend class="form-group__title">Дополнительно</legend>
-        <label class="form-group__item " for="sugarfree">
+        <label class="form-group__item form-group__item--checkbox" for="sugarfree">
           Cахарозаменитель
-          <input class="form-group__checkbox" type="checkbox" id="sugarfree" name="sugarfree" checked>
+          <input class="form-group__item-input" type="checkbox" id="sugarfree" name="sugarfree" checked>
         </label>
         <label class="form-group__item form-group__item--checkbox" for="water">
           Питьевая вода
-          <input class="form-group__checkbox" type="checkbox" id="water" name="water">
+          <input class="form-group__item-input" type="checkbox" id="water" name="water">
         </label>
         <label class="form-group__item form-group__item--checkbox" for="milk">
           Молоко
-          <input class="form-group__checkbox" type="checkbox" id="milk" name="milk">
+          <input class="form-group__item-input" type="checkbox" id="milk" name="milk">
         </label>
         <label class="form-group__item form-group__item--checkbox" for="vitamins">
           Витамины
-          <input class="form-group__checkbox" type="checkbox" id="vitamins" name="vitamins">
+          <input class="form-group__item-input" type="checkbox" id="vitamins" name="vitamins">
         </label>
       </fieldset>
 
@@ -148,7 +168,8 @@
   <footer class="main-footer">
 
     <a class="main-footer__logo logo" href="#">
-      <img class="logo__text" src="#" width="50" height="50" alt="Логотип Cat Energy.">
+      <img class="main-footer__logo-text" src="images/svg/logo-text.svg" width="101" height="18"
+        alt="Наименование компании Cat energy.">
     </a>
 
     <ul class="main-footer__socials socials">
@@ -172,10 +193,9 @@
       </li>
     </ul>
 
-    <a class="coopyright" href="https://htmlacademy.ru/intensive/adaptive">
-
-      <span class="coopyright__text">HTML Academy</span>
-
+    <a class="main-footer__coopyright coopyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <span class="coopyright__text">HTML Academy
+      </span>
       <span class="visually-hidden">Логотип HTML Academy.</span>
     </a>
 
