@@ -1,8 +1,11 @@
 .map {
   background-color: $basic-text-background;
+  padding-bottom: 40px;
 }
 
 .map__title {
+  margin: 0;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;

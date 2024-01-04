@@ -1,6 +1,22 @@
+.hero__content {
+  background-image: url("../../images/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 302px;
+}
+
 .hero__slogan {
   color: #ffffff;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.hero__button {
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 138px;
+  padding: 10px 44px;
 }

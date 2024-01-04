@@ -16,14 +16,22 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="#">
-      <img class="main-header__logo-image" src="#" width="50" height="50" alt="Логотип Cat energy.">
-      <img class="main-header__logo-image" src="#" width="50" height="50" alt="Наименование компании Cat energy.">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/svg/logo-desktop.svg" width="70"
+          height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/svg/logo-tablet.svg" width="60"
+          height="50">
+        <img class="main-header__logo-image" src="images/svg/logo-mobile.svg" width="33" height="38"
+          alt="Логотип Cat Energy.">
+      </picture>
+      <img class="main-header__logo-text" src="images/svg/logo-text.svg" width="101" height="18"
+        alt="Наименование компании Cat energy.">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
-      
+
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link site-list__link--current" href="index.html">
@@ -46,11 +54,13 @@
   </header>
   <main class="main-container">
     <section class="hero">
-      <h1 class="hero__title main-title main-title--index">Функциональное
-        питание для котов
-      </h1>
-      <p class="hero__slogan">Занялся собой? Займись котом!
-      </p>
+      <div class="hero__content">
+        <h1 class="hero__title main-title main-title--index">Функциональное
+          питание для котов
+        </h1>
+        <p class="hero__slogan">Занялся собой? Займись котом!
+        </p>
+      </div>
 
       <picture>
         <source type="image/png" media="(min-width: 1440px)"
@@ -87,19 +97,19 @@
     <section class="advantages">
       <h2 class="advantages__title">Как это работает</h2>
       <ol class="advantages__list">
-        <li class="advantages__item">Функциональное питание
+        <li class="advantages__item advantages__item--nutrition">Функциональное питание
           содержит только полезные
           питательные вещества.
         </li>
-        <li class="advantages__item">Выпускается в виде порошка,
+        <li class="advantages__item advantages__item--cooking">Выпускается в виде порошка,
           который нужно лишь залить
           кипятком и готово.
         </li>
-        <li class="advantages__item">Замените один-два приема
+        <li class="advantages__item advantages__item--meal">Замените один-два приема
           обычной еды на наше
           функциональное питание.
         </li>
-        <li class="advantages__item">Уже через месяц наслаждайтесь
+        <li class="advantages__item advantages__item--loss">Уже через месяц наслаждайтесь
           изменениями к лучшему
           вашего питомца!
         </li>
@@ -112,7 +122,8 @@
       </h2>
 
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-        Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+        Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
+        спит
         по 16 часов в день.</p>
       <div class="example__weight">
         <ul class="example__list weight">
@@ -150,11 +161,8 @@
 
         </div>
         <div class="slider__toggles">
-          <button class="slider__toggle slider__toggle--left" type="button">
-            <span class="visually-hidden">Влево</span>
-          </button>
-          <button class="slider__toggle slider__toggle--rigth" type="button">
-            <span class="visually-hidden">Вправо</span>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Кнопка влево-вправо.</span>
           </button>
         </div>
       </div>
@@ -180,7 +188,8 @@
   <footer class="main-footer">
 
     <a class="main-footer__logo logo" href="#">
-        <img class="logo__text" src="#" width="50" height="50" alt="Логотип Cat Energy.">
+      <img class="main-footer__logo-text" src="images/svg/logo-text.svg" width="101" height="18"
+        alt="Наименование компании Cat energy.">
     </a>
 
     <ul class="main-footer__socials socials">
@@ -204,7 +213,7 @@
       </li>
     </ul>
 
-    <a class="coopyright" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="main-footer__coopyright coopyright" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="coopyright__text">HTML Academy
       </span>
       <span class="visually-hidden">Логотип HTML Academy.</span>

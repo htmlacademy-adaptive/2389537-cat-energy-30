@@ -1,9 +1,35 @@
+/* stylelint-disable indentation */
+.more {
+  padding-top: 25px;
+}
+
 .more__title {
   @include link();
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #222222;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding-top: 23px;
+  font-weight: 400;
+
+  & h2 {
+  margin: 0;
+  font-weight: 400;
+}
+}
+
+.more__title::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: 45%;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icons/stack.svg#plus");
+  background-repeat: no-repeat;
 }
 
 .more__text {
@@ -11,4 +37,6 @@
   font-size: 12px;
   line-height: 16px;
   color: $paragraf-font-color;
+  text-align: center;
 }
+
