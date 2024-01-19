@@ -1,7 +1,6 @@
 .card-add__title {
   margin: 0;
   font-weight: 400;
-  text-align: center;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -10,9 +9,13 @@
 
 .card-add__list {
   @include list();
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
 }
 
-.card-add__list-name .card-add__list-value {
+
+.card-add__list span {
   font-family: $secondary-font;
   text-align: center;
   line-height: 14px;

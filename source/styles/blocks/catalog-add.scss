@@ -1,6 +1,27 @@
+.catalog-add {
+  @include container();
+}
+
 .catalog-add__title {
   margin: 0;
   font-weight: 400;
   text-align: center;
-  font-size: 24px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.catalog-add__list {
+  padding: 0;
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.catalog-add__names {
+  margin-bottom: 35px;
+}
+
+.catalog-add__item {
+  padding: 0;
+  margin-bottom: 35px;
 }

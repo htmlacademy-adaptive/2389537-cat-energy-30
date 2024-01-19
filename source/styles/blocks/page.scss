@@ -5,8 +5,10 @@
   line-height: 24px;
   font-weight: 400;
   color: $text-font-color;
+  height: 100%;
 }
 
 .page__body {
   margin: 0;
+  min-height: 100%;
 }

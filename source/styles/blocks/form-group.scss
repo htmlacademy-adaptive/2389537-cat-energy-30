@@ -1,12 +1,12 @@
 .form-group {
-  display: flex;
-  flex-direction: column;
+  @include container();
+  padding-bottom: 24px;
   border: none;
 }
 
 .form-group__item {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
   font-size: 16px;

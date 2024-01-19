@@ -3,20 +3,75 @@
 }
 
 .example__title {
-  text-align: center;//margin:0//
+  @include container();
+  text-align: center;
+  margin: 0;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+
+.example__stats,
+.example__slider {
+  @include container();
 }
 
 .example__description {
   font-family: $secondary-font;
   line-height: 18px;
   color: $paragraf-font-color;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__item {
+  margin-bottom: 20px;
 }
 
 .example__expenses {
+  margin-bottom: 20px;
   text-align: center;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: unset;
+  }
+
+  .example__title {
+    padding-top: 45px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .example__slider {
+    background-color: #eaeaea;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    @include container();
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .example__title,
+  .example__stats,
+  .example__slider {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .example__title {
+    padding-bottom: 76px;
+    grid-column: span 2;
+  }
 }
