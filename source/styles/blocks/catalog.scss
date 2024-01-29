@@ -5,18 +5,18 @@
 .catalog__list {
   @include list();
   margin-bottom: 25px;
+  padding: 0;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .catalog__title {
   @include container();
-  padding-top: 27px;
-  padding-bottom: 41px;
   border-bottom: 1px solid #ebebeb;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__title {
-    margin-bottom: 74px;
+    margin-bottom: 84px;
     border: none;
   }
 
@@ -26,6 +26,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-bottom: 70px;
+    border: none;
   }
 
 

@@ -38,12 +38,32 @@
 }
 
 @media (min-width: $desktop-width) {
+  .site-list {
+    column-gap: 34px;
+
+    &--light .site-list__link {
+      color: #ffffff;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      &--current {
+        border-color: #ffffff;
+      }
+    }
+  }
+
   .site-list__link {
-    padding-top: 71px;
-    color: #ffffff;
+    padding-top: 74px;
+    font-size: 20px;
 
     &--current {
-      border-color: #ffffff;
+      border-bottom: 2px solid $primary-color;
     }
   }
 }

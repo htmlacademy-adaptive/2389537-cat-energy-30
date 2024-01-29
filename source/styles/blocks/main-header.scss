@@ -12,10 +12,6 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.main-header__toggle {
-  display: block;
-}
-
 @media (min-width: $tablet-width) {
   .main-header {
     @include container();
