@@ -30,4 +30,11 @@
   font-family: $secondary-font;
   color: $paragraf-font-color;
   line-height: 20px;
+  font-size: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .coopyright__text {
+    padding-right: 23px;
+  }
 }

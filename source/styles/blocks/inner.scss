@@ -5,6 +5,7 @@
 }
 
 .inner__text {
+  @include container();
   display: block;
   margin-bottom: 39px;
   line-height: 18px;
@@ -12,6 +13,31 @@
 }
 
 .inner__title {
+  @include container();
   padding-top: 27px;
   padding-bottom: 37px;
+}
+
+@media (min-width: $tablet-width) {
+  .inner__title {
+    margin-bottom: 54px;
+  }
+
+  .inner__text {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner {
+    & .map__information {
+      background-color: #ffffff;
+    }
+  }
+
+  .inner__items {
+    margin-bottom: 79px;
+  }
 }

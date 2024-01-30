@@ -1,20 +1,38 @@
 .card-add__title {
   margin: 0;
   font-weight: 400;
-  text-align: center;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: #222222;
+  padding-bottom: 13px;
 }
 
 .card-add__list {
   @include list();
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
 }
 
-.card-add__list-name .card-add__list-value {
+
+.card-add__list span {
   font-family: $secondary-font;
   text-align: center;
   line-height: 14px;
   color: $paragraf-font-color;
+}
+
+.card-add__list-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .card-add__list {
+    border: 1px solid #cdcdcd;
+    padding: 26px 38px 28px;
+  }
 }

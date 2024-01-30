@@ -1,3 +1,44 @@
 .main-header {
   font-size: 16px;
 }
+
+.main-header__top {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  padding-top: 13px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+    gap: 66px;
+  }
+
+  .main-header__top {
+    display: block;
+    width: 202px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    margin-bottom: 60px;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header__logo {
+    & .main-header__logo-text {
+      width: 118px;
+      height: 21px;
+    }
+  }
+}

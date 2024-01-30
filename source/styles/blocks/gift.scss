@@ -1,5 +1,3 @@
-/* stylelint-disable declaration-block-no-duplicate-properties */
-/* stylelint-disable no-eol-whitespace */
 .gift {
   background-color: $primary-color;
   background-image: url("../../images/cat-case-mobile@1x.jpg");
@@ -7,7 +5,9 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column-reverse;
-  min-height: 290px;
+  height: 290px;
+  margin-bottom: 35px;
+  align-items: center;
 }
 
 .gift__text {
@@ -18,8 +18,8 @@
   line-height: 20px;
   color: #ffffff;
   position: relative;
-  margin: 0;
   padding-bottom: 43px;
+  width: 161px;
 
   &::before {
     content: "";
@@ -29,6 +29,49 @@
     width: 78px;
     height: 80px;
     background-image: url("../../images/icons/stack.svg#icon-gift");
-    z-index: 4;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .gift {
+    height: 200px;
+    padding-right: 125px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: normal;
+
+    background-position-y: 61%;
+  }
+
+  .gift__text {
+    width: 161px;
+    padding-top: 71px;
+    text-align: left;
+
+    &::before {
+      top: 57px;
+      left: -344px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    display: block;
+    width: 245px;
+    height: 100%;
+  }
+
+  .gift__text {
+    width: 203px;
+    padding-top: 185px;
+    padding-left: 42px;
+
+    text-align: center;
+
+    &::before {
+      top: 57px;
+      left: 84px;
+    }
   }
 }

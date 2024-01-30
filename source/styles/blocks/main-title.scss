@@ -2,9 +2,22 @@
   font-size: 36px;
   line-height: 36px;
   color: $text-font-color;
+  margin: 0;
+  font-weight: 400;
 
   &--index {
     color: #ffffff;
     text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-title {
+    font-size: 60px;
+    line-height: 60px;
+
+    &--index {
+      color: $text-font-color;
+    }
   }
 }

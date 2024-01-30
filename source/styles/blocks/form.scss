@@ -1,3 +1,4 @@
+/* stylelint-disable indentation */
 .form__item {
   &--anketa {
     border-bottom: 1px solid #d9d9d9;
@@ -7,7 +8,63 @@
     margin-bottom: 26px;
     padding-top: 22px;
     padding-bottom: 19px;
-
     border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.form__bottom {
+  @include container();
+  margin-bottom: 32px;
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 21px;
+}
+
+.form__bottom-text {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form__item {
+    border: none;
+
+    &--radio {
+      padding: 0;
+      margin: 0;
+      border: 1px solid #e7e7e7;
+    }
+
+    &--checkbox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form__bottom {
+    display: flex;
+  }
+
+  .form__button {
+    width: 284px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+ .form__items-wrapper {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 80px;
+
+  & fieldset {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    }
   }
 }

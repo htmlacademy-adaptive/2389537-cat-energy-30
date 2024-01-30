@@ -1,18 +1,20 @@
 .form-group {
-  display: flex;
-  flex-direction: column;
+  @include container();
+  padding-bottom: 24px;
   border: none;
+  margin: 0 auto;
 }
 
 .form-group__item {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $paragraf-font-color;
+  gap: 13px;
 
   &--radio {
     flex-direction: row-reverse;
@@ -21,7 +23,7 @@
 
   &--textarea {
     width: 100%;
-    min-height: 140px;
+    min-height: 150px;
     font-family: $primary-font;
     font-size: 16px;
     font-style: normal;
@@ -29,11 +31,13 @@
     text-transform: uppercase;
     border-radius: 0;
     border: 1px solid #e7e7e7;
+    padding: 14px;
   }
 
   &--checkbox {
     flex-direction: row-reverse;
     justify-content: flex-end;
+    gap: 13px 15px;
 
     & input {
       flex-grow: 0;
@@ -81,17 +85,8 @@
   }
 }
 
-.form-group__item-input::placeholder {
-  line-height: 18px;
-  text-transform: uppercase;
-  color: $paragraf-font-color;
-  font-weight: 400;
-  font-size: 16px;
-}
-
 .form-group__item-input {
   flex-grow: 1;
-  margin-left: 13px;
   padding: 14px 15px 13px 15px;
   font-family: $primary-font;
   font-size: 16px;
@@ -100,11 +95,22 @@
   text-transform: uppercase;
   border: 1px solid #e7e7e7;
   border-radius: 0;
+
+  &::placeholder {
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $paragraf-font-color;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+    border-radius: 0;
+  }
 }
 
 .form-group__title {
   color: $text-font-color;
   font-size: 24px;
   line-height: 26px;
-  padding-bottom: 35px;
+  padding-bottom: 38px;
 }
